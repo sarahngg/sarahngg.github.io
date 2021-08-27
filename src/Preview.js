@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
 import Text from './Text';
-
 function Preview (props) {
   return (
     <Paper variant="outlined" elevation={0}>

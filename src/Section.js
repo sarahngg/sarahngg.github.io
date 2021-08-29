@@ -4,15 +4,24 @@ import Grid from '@material-ui/core/Grid';
 import Preview from './Preview';
 import Text from './Text';
 
+const bgcolors = [
+  'primary.light',
+  'secondary.light'
+]
+
+function getColor(id) {
+  return bgcolors[id%bgcolors.length];
+}
+
 function Section (props) {
   return (
-    <Grid item sx={{ bgcolor: 'primary.light'}}>
-      <Container sx={{ py: 4, width: '60em' }}>
+    <Grid item sx={{ bgcolor: getColor(props.id)}}>
+      <Container sx={{ py: 4 }}>
         <Text type="title" value={props.title}/>
         <Text type="description" value={props.description}/>
-        <Grid container spacing={1}>
+        <Grid container spacing={3} sx={{ my: 1 }}>
           {props.contentList.map( content => 
-          <Grid item xs={4} spacing={3}><Preview></Preview></Grid>)}
+          <Grid item xs={12} md={4} spacing={3}><Preview></Preview></Grid>)}
         </Grid>
       </Container>
     </Grid>

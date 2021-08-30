@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import './App.css';
 import Section from './Section';
+import projectList from './projectList.js';
 
 const sections = [
   <Section title="Fname Lname" description="👋 Hello" layout="hero"/>,
@@ -44,29 +45,5 @@ function Copyright() {
     </Grid>
   );
 }
-
-const projectList = [
-	{
-		"title": "A section title",
-		"description": "Describe section here",
-		"image": "",
-		"date": 2020,
-		"blurb": "This project is made by x for y"
-	},
-	{
-		"title": "Un petite section title",
-		"description": "Describe section here ola",
-		"image": "",
-		"date": 2019,
-		"blurb": "Ooolala"
-	},
-  {
-		"title": "Project X",
-		"description": "Confidential",
-		"image": "",
-		"date": 2021,
-		"blurb": "Nope"
-	}
-]
 
 export default App;

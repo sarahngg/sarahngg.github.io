@@ -21,7 +21,7 @@ function Section (props) {
         <Text type="description" value={props.description}/>
         <Grid container spacing={3} sx={{ my: 1 }}>
           {props.contentList.map( content => 
-          <Grid item xs={12} md={4} spacing={3}>
+          <Grid item xs={12} md={4} key={content.id} >
           <Preview {... content}/>
           </Grid>)}
         </Grid>

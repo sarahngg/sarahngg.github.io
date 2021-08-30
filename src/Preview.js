@@ -24,7 +24,7 @@ function Preview (props) {
   const handleClose = () => setOpen(false);
 
   return (<>
-    <Card id={props.title} key={props.title}>
+    <Card>
       <CardActionArea onClick={handleOpen}>
         <CardMedia
           component="img"

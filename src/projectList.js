@@ -1,5 +1,6 @@
 const projectList = [
 	{
+		"id": "project-1",
 		"title": "A project title",
 		"description": "A project that has a description",
 		"image": "https://source.unsplash.com/random/640x360/?minimalist",
@@ -7,6 +8,7 @@ const projectList = [
 		"blurb": "This project is made by x for y. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 	},
 	{
+		"id": "project-2",
 		"title": "Another project title",
 		"description": "This is another project with a description",
 		"image": "https://source.unsplash.com/user/milliondollarproject/likes/640x360",
@@ -14,6 +16,7 @@ const projectList = [
 		"blurb": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 	},
   {
+		"id": "project-x",
 		"title": "Project X",
 		"description": "Confidential",
 		"image": "https://source.unsplash.com/random/640x360/?secret",

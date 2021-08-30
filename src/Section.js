@@ -16,16 +16,22 @@ function getColor(id) {
 function Section (props) {
   return (
     <Grid item sx={{ bgcolor: getColor(props.id)}}>
-      <Container sx={{ py: 4 }}>
-        <Text type="title" value={props.title}/>
-        <Text type="description" value={props.description}/>
-        <Grid container spacing={3} sx={{ my: 1 }}>
-          {props.contentList.map( content => 
-          <Grid item xs={12} md={4} key={content.id} >
-          <Preview {... content}/>
-          </Grid>)}
+      <Grid container spacing={2}>
+        <Grid item className="section-margin" xs={1} md={2}/>
+        <Grid item xs={10} md={8} >
+        <Container sx={{ py: 4 }}>
+          <Text type="title" value={props.title}/>
+          <Text type="description" value={props.description}/>
+          <Grid container spacing={3} sx={{ my: 1 }}>
+            {props.contentList.map( content => 
+            <Grid item xs={12} md={4} key={content.id} >
+            <Preview {... content}/>
+            </Grid>)}
+          </Grid>
+        </Container>
         </Grid>
-      </Container>
+        <Grid item className="section-margin" xs={1} md={2}/>
+      </Grid>
     </Grid>
   )
 }

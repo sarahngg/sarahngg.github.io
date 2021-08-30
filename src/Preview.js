@@ -28,26 +28,33 @@ function Preview (props) {
       <CardActionArea onClick={handleOpen}>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          height="180"
+          image={props.image}
+          alt="random image"
         />
         <CardContent>
-          <Text type="title" value={props.content.title}/>
-          <Text type="description" value={props.content.description}/>
+          <Text type="card-title" value={props.title}/>
+          <Text type="card-description" value={props.description}/>
         </CardContent>
       </CardActionArea>
     </Card>
     <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby={props.content.title}
-        aria-describedby={props.content.description}
+        aria-labelledby={props.title}
+        aria-describedby={props.description}
       >
         <Box sx={style}>
-          <Text type="title" value={props.content.title}/>
-          <Text value={`${props.content.date} | ${props.content.description}`}/> 
-          <Text value={props.content.blurb}/>
+          <Text type="modal-title" value={props.title}/>
+          <Text value={`${props.date} | ${props.description}`}/>
+          <CardMedia
+              component="img"
+              height="180"
+              image={props.image}
+              alt="random image"
+              sx={{my: 2}}
+            /> 
+          <Text type="modal-description" value={props.blurb}/>
         </Box>
       </Modal>
       </>

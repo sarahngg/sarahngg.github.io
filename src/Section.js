@@ -22,7 +22,7 @@ function Section (props) {
         <Grid container spacing={3} sx={{ my: 1 }}>
           {props.contentList.map( content => 
           <Grid item xs={12} md={4} spacing={3}>
-          <Preview content={content}/>
+          <Preview {... content}/>
           </Grid>)}
         </Grid>
       </Container>

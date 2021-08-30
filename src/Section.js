@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Preview from './Preview';
 import Text from './Text';
+import { Link } from 'react-router-dom';
 
 const bgcolors = [
   'primary.light',
@@ -25,7 +26,9 @@ function Section (props) {
           <Grid container spacing={3} sx={{ my: 1 }}>
             {props.contentList.map( content => 
             <Grid item xs={12} md={4} key={content.id} >
+            <Link to={`/p/${content.id}`} style={{ textDecoration: 'none' }}>
             <Preview {... content}/>
+            </Link>
             </Grid>)}
           </Grid>
         </Container>

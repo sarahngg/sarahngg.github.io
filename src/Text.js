@@ -42,7 +42,7 @@ function Text(props) {
       break;
     case "modal-description":
       textElement = (
-        <Typography color="text.secondary" sx={{ mt: 2 }}>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
           {props.value}
         </Typography>
       )

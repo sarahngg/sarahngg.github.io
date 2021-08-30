@@ -1,19 +1,41 @@
 import { createTheme } from '@material-ui/core/styles';
 
-const theme = createTheme({
-  palette: {
-    type: 'light',
-    primary: {
-      main: '#78909c',
-    },
-    secondary: {
-      main: '#ffab40',
-    },
+const lightPalette = {
+  type: 'light',
+  primary: {
+    main: '#78909c',
   },
-  typography: {
-    fontFamily: 'Questrial',
+  secondary: {
+    main: '#ffab40',
   },
-  spacing: 6,
-});
+  background: {
+    paper: '#f5f5f5',
+  },
+};
+
+const darkPalette = {
+  type: 'dark',
+  primary: {
+    main: '#78909c',
+  },
+  secondary: {
+    main: '#ffab40',
+  },
+};
+
+function makeThemeWithPalette (palette) {
+  return createTheme({
+    palette: palette,
+    typography: {
+      fontFamily: 'Questrial',
+    },
+  // spacing: 6,
+  })
+}
+
+const theme = { 
+  light: makeThemeWithPalette(lightPalette), 
+  dark:  makeThemeWithPalette(darkPalette)
+};
 
 export default theme;

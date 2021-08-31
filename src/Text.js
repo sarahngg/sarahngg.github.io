@@ -14,7 +14,7 @@ function Text(props) {
       break;
     case "description":
       textElement = (
-        <Typography variant="h5" component="h1" gutterBottom>
+        <Typography variant="h5" component="h1">
           {props.value}
         </Typography>
       )

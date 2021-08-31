@@ -16,25 +16,23 @@ function getColor(id) {
 
 function Section (props) {
   return (
-    <Grid item sx={{ bgcolor: getColor(props.id)}}>
-      <Grid container spacing={2}>
-        <Grid item className="section-margin" xs={1} md={2}/>
-        <Grid item xs={10} md={8} >
-        <Container sx={{ py: 4 }}>
-          <Text type="title" value={props.title}/>
-          <Text type="description" value={props.description}/>
-          <Grid container spacing={3} sx={{ my: 1 }}>
-            {props.contentList && props.contentList.map( content => 
-            <Grid item xs={12} md={4} key={content.id} >
-            <Link to={`/p/${content.id}`} style={{ textDecoration: 'none' }}>
-            <Preview {... content}/>
-            </Link>
-            </Grid>)}
-          </Grid>
-        </Container>
-        </Grid>
-        <Grid item className="section-margin" xs={1} md={2}/>
+    <Grid container bgcolor={getColor(props.id)} py={3}>
+      <Grid item xs={1} md={2}/>
+      <Grid item xs={10} md={8} >
+      <Container>
+        <Text type="title" value={props.title}/>
+        <Text type="description" value={props.description}/>
+        {props.contentList && (<Grid container py={2} spacing={2}>
+          {props.contentList.map( content => 
+          <Grid item xs={12} md={4} key={content.id} >
+          <Link to={`/p/${content.id}`} style={{ textDecoration: 'none' }}>
+          <Preview {... content}/>
+          </Link>
+          </Grid>)}
+        </Grid>)}
+      </Container>
       </Grid>
+      <Grid item xs={1} md={2}/>
     </Grid>
   )
 }

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Section from './Section';
 
 
 function Home(props) {
   const sections = [
-    <Section title="Fname Lname" description="👋 Hello" layout="hero"/>,
-    <Section title="Projects" description="Things I did" contentList={props.projectList}/>
+    <Section title="Sarah Ng" description="👋 Hello" layout="hero"/>,
+    <Section title="Projects" description="Things I did" 
+    contentList={props.projectList}/>
   ];
 
   function addPropsToSections (sections) {
@@ -17,12 +17,8 @@ function Home(props) {
       })
     })
   }
-
-  return (
-      <Grid container direction="column">
-      {addPropsToSections(sections)}
-      </Grid>
-  );
+  const sectionsWithIdKey = addPropsToSections(sections);
+  return sectionsWithIdKey;
 }
 
 export default Home;

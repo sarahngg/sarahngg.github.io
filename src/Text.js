@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 
 function Text(props) {
-  if (!props.value) return;
+  if (!props.value) return <span/>;
   let textElement = "";
   switch (props.type) {
     case "title":
@@ -42,7 +42,7 @@ function Text(props) {
       break;
     case "modal-description":
       textElement = (
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+        <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
           {props.value}
         </Typography>
       )
@@ -58,9 +58,9 @@ function Text(props) {
   return textElement;
 }
 
-Text.defaultProps = {
-  type: "normal",
-  value: "Placeholder Text"
-}
+// Text.defaultProps = {
+//   type: "normal",
+//   value: "Placeholder Text"
+// }
 
 export default Text;

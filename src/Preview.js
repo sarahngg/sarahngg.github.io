@@ -14,7 +14,7 @@ function Preview (props) {
           image={props.image}
           alt="random image"
         />
-        <CardContent>
+        <CardContent sx={{ minHeight: "8rem"}}>
           <Text type="card-title" value={props.title}/>
           <Text type="card-description" value={props.description}/>
         </CardContent>
@@ -23,12 +23,12 @@ function Preview (props) {
   )
 }
 
-Preview.defaultProps = {
-  "title": "Preview Title Placeholder", 
-  "description": "Preview description placeholder", 
-  "image": "",
-  "date": 1990,
-  "blurb": "Blub placeholder"
-}
+// Preview.defaultProps = {
+//   "title": "Preview Title Placeholder", 
+//   "description": "Preview description placeholder", 
+//   "image": "",
+//   "date": 1990,
+//   "blurb": "Blub placeholder"
+// }
 
 export default Preview;

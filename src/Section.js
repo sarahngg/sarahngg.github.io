@@ -24,7 +24,7 @@ function Section (props) {
           <Text type="title" value={props.title}/>
           <Text type="description" value={props.description}/>
           <Grid container spacing={3} sx={{ my: 1 }}>
-            {props.contentList.map( content => 
+            {props.contentList && props.contentList.map( content => 
             <Grid item xs={12} md={4} key={content.id} >
             <Link to={`/p/${content.id}`} style={{ textDecoration: 'none' }}>
             <Preview {... content}/>
@@ -39,11 +39,11 @@ function Section (props) {
   )
 }
 
-Section.defaultProps = {
-  title: "Section Title Placeholder", 
-  description: "Section Description Placeholder",
-  contentList: [],
-  layout: "default",
-}
+// Section.defaultProps = {
+//   title: "Section Title Placeholder", 
+//   description: "Section Description Placeholder",
+//   contentList: [],
+//   layout: "default",
+// }
 
 export default Section;

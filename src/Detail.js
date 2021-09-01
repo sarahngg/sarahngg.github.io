@@ -88,7 +88,7 @@ function Detail (props) {
           </Stack>)}
         <CardMedia
             component="img"
-            height="180"
+            height="200"
             image={item.image}
             alt="random image"
             sx={{my: 2}}

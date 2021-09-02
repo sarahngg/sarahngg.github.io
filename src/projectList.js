@@ -12,7 +12,7 @@ const projectList = [
 		"technologies": ["ReactJS", "Material-UI v5", "GitHub Pages"],
 		"image": "https://source.unsplash.com/random/640x360/?minimalist",
 		"date": 2021,
-		"blurb": "This is a website showcasing my projects and roles",
+		"blurb": "This is a website showcasing my projects and experience. The content of this project is templatized such that anyone can fork the repo and quickly build a portfolio site. To add additional project and experience, the user would only need to edit a JSON file.",
 		"links" : {
 			"trust the recursion" : "https://sarahngg.github.io/",
 			"repo" : "https://github.com/sarahngg/sarahngg.github.io"
@@ -63,6 +63,7 @@ const projectList = [
 		"title": "LearnOncology.ca",
 		"description": "Educational resource about oncology management",
 		"role": "Webmaster",
+		"technologies": ["Webflow Designer & Editor", "CSS", "SEO"],
 		"image": "https://res.cloudinary.com/sng/image/upload/b_rgb:ffffff,bo_100px_solid_rgb:ffffff/v1630358741/portfolio/lo.png",
 		"blurb": "I decreased the load time by 75% through migrating content from the old Wordpress site to Webflow. I redesigned the learning resources and its templates using CSS concepts in Webflow. As non-technical content editors would be adding contents to the site, I created quick guides and detailed tutorial documentations. In addition, I managed SEO and integrated the site with Google Analytics.",
 		"links" : {
@@ -70,12 +71,11 @@ const projectList = [
 		}
 	},
   {
-		"id": "project-x",
-		"title": "Project X",
-		"description": "Confidential",
-		"image": "https://source.unsplash.com/random/640x360/?confidential",
-		"date": 2021,
-		"blurb": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+		"id": "lorem-ipsum",
+		"title": "Lorem Ipsum",
+		"description": "de Finibus Bonorum et Malorum",
+		"image": "https://source.unsplash.com/random/640x360/?placeholder",
+		"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod quis viverra nibh cras. Sit amet est placerat in. Aliquam sem fringilla ut morbi tincidunt. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Ultricies mi eget mauris pharetra et ultrices. Elit pellentesque habitant morbi tristique senectus et netus et. Ut aliquam purus sit amet luctus venenatis. Dignissim sodales ut eu sem integer. Amet porttitor eget dolor morbi non. Ut porttitor leo a diam sollicitudin tempor. At urna condimentum mattis pellentesque id nibh tortor. Facilisis leo vel fringilla est ullamcorper eget nulla. Tristique et egestas quis ipsum suspendisse ultrices. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Egestas quis ipsum suspendisse ultrices gravida dictum. Odio euismod lacinia at quis risus sed. Vitae et leo duis ut diam. Neque gravida in fermentum et. Ac turpis egestas sed tempus urna. Gravida quis blandit turpis cursus in hac. Elementum nisi quis eleifend quam adipiscing. Euismod quis viverra nibh cras pulvinar. Sed felis eget velit aliquet sagittis. Sed adipiscing diam donec adipiscing tristique risus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Integer enim neque volutpat ac. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Turpis massa sed elementum tempus. Netus et malesuada fames ac turpis. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget."
 	}
 ]
 

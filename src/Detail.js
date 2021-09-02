@@ -8,6 +8,7 @@ import Modal from '@material-ui/core/Modal';
 import Link from '@material-ui/core/Link';
 import Stack from '@material-ui/core/Stack';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Redirect } from 'react-router-dom';
 import Text from './Text';
 
 const style = {
@@ -40,35 +41,32 @@ const styledModal = {
 };
 function Detail (props) {
   const [open, setOpen] = React.useState(true);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => {
-    history.goBack();
     setOpen(false);
   }
-  const { item, history } = props;
+  const { item } = props;
   
   const Links = () => {
-    const linkButtons =
-    item.links && Object.keys(item.links).map(linkName => {
+    const linkButtons = item.links && Object.keys(item.links)
+    .filter(linkName => item.links[linkName])
+    .map(linkName => {
         let url = item.links[linkName];
-        if (url) {
-          return (
-            <Link key={url} href={url} target="_blank" color="inherit">
-              <Button variant="outlined">{linkName}</Button>
-            </Link>
-          )
-        }
+        return (
+          <Link key={url} href={url} target="_blank" color="inherit">
+            <Button disableElevation variant="contained">{linkName}</Button>
+          </Link>
+        )
       });
     return (
       <Stack direction="row-reverse" justifyContent="flex-start"
       alignItems="center" spacing={1} sx={{ mt: 2 }}>
         {linkButtons && linkButtons}
-        <Button onClick={handleClose} size="medium">Back</Button>
+        <Button variant="outlined" onClick={handleClose} size="medium">Back</Button>
       </Stack>
     );
   }
 
-  return (
+  let content = (
     <Modal sx={styledModal}
         open={open}
         onClose={handleClose}
@@ -102,6 +100,8 @@ function Detail (props) {
     </Box>
     </Modal>
   )
+
+  return open ? content : <Redirect to='/' />
 }
 
 Detail.defaultProps = {

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Section from './Section';
+import Section from './components/Section';
 
 
 function Home(props) {
   const sections = [
-    <Section title="Sarah Ng" description="👋 Hello" layout="hero"/>,
+    <Section title="Sarah Ng" description="👋 Hello" />,
     <Section title="Projects" description="Things I did" 
     contentList={props.projectList}/>
   ];

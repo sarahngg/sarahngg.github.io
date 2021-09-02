@@ -41,7 +41,6 @@ function Section (props) {
 //   title: "Section Title Placeholder", 
 //   description: "Section Description Placeholder",
 //   contentList: [],
-//   layout: "default",
 // }
 
 export default Section;

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import './index.css';
 import App from './App';
@@ -9,11 +8,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <ThemeProvider theme={theme.light}>
-        <App />
-      </ThemeProvider>
-    </HashRouter>
+    <ThemeProvider theme={theme.light}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

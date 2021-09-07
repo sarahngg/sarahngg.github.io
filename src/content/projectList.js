@@ -7,15 +7,15 @@ const projectList = [
 	{
 		"id": "portfolio",
 		"title": "My Portfolio",
-		"description": "This website!",
-		"role": "Frontend Developer",
-		"technologies": ["ReactJS", "Material-UI v5", "GitHub Pages"],
+		"description": "A personal portfolio site showcasing technical projects",
+		"role": "Full-stack Developer",
+		"technologies": ["ReactJS", "Material-UI v5", "Express", "MongoDB", "Heroku", "GitHub Pages"],
 		"image": "https://source.unsplash.com/random/640x360/?minimalist",
 		"date": 2021,
-		"blurb": "This is a website showcasing my projects and experience. The content of this project is templatized such that anyone can fork the repo and quickly build a portfolio site. To add additional project and experience, the user would only need to edit a JSON file.",
+		"blurb": "This is a full-stack portfolio web application showcasing one's projects and experience. The contents of this application is templatized such that adding to the database will automatically populate the front end without the need of re-deployment.",
 		"links" : {
-			"trust the recursion" : "https://sarahngg.github.io/",
-			"repo" : "https://github.com/sarahngg/sarahngg.github.io"
+			"Back end" : "https://github.com/sarahngg/portfolio-server",
+			"Front end" : "https://github.com/sarahngg/sarahngg.github.io/tree/get-data-from-server"
 		}
 	},
 	{

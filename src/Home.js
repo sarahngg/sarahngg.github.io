@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Section from './components/Section';
+import { SERVER_URL } from './api/APIUtils';
 
 function Home(props) {
   const [user, setUser] = useState();
@@ -11,7 +12,7 @@ function Home(props) {
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/users/sn`);
+      const response = await axios.get(`${SERVER_URL}/users/sn`);
       const { user } = response.data;
       setUser(user);
       setName(user.name);
@@ -25,7 +26,7 @@ function Home(props) {
   const getSections = async (sections) => {
     try {
       sections.forEach(async (sectionId, index ) => {
-        const response = await axios.get(`http://localhost:5000/api/sections/${sectionId}`);
+        const response = await axios.get(`${SERVER_URL}/sections/${sectionId}`);
         const { section } = response.data;
         setSections(sections => [...sections, section]);
       })

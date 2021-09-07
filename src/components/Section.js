@@ -6,6 +6,7 @@ import axios from 'axios';
 import Preview from './Preview';
 import Text from './Text';
 import { Link } from 'react-router-dom';
+import { SERVER_URL } from '../api/APIUtils';
 
 const bgcolors = [
   'primary.light',
@@ -20,7 +21,7 @@ function Section (props) {
   const [items, setItems] = useState([]);
   const getItems = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/items?sectionId=${props.id}`);
+      const response = await axios.get(`${SERVER_URL}/items?sectionId=${props.id}`);
       const { items } = response.data;
       setItems(items);
     } catch (err) {
